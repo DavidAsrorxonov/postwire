@@ -1,0 +1,22 @@
+{
+  "name": "postwire",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "dev:web": "npm run dev -w apps/web",
+    "check:boundaries": "node scripts/check-boundaries.mjs"
+  },
+  "devDependencies": {
+    "@babel/parser": "7.29.9",
+    "@types/node": "22.20.5",
+    "get-tsconfig": "4.14.3",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3"
+  }
+}
